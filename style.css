@@ -1,0 +1,100 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: aliceblue;
+}
+
+main {
+	flex: 4;
+	display: grid;
+	grid-template-areas:
+		"header header header"
+		"aside s-head s-head"
+		"aside s-aside ss-head-one"
+		"aside s-aside ss-head-two"
+		"aside s-aside ss-head-three";
+	grid-gap: 10px;
+	grid-template-rows: 2fr 2fr 1fr 1fr 2fr;
+	grid-template-columns: 2fr 1fr 1fr;
+}
+
+section {
+	display: flex;
+	min-height: 100vh;
+}
+
+header, footer {
+	background: dimgray;
+	text-align: center;
+	padding: 1em;
+}
+
+header {
+	margin-bottom: 10px;
+}
+
+footer {
+	margin-top: 10px;
+}
+
+h1 {
+	margin: 0;
+	color: #fff;
+}
+
+aside {
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+	margin-right: 10px
+}
+
+aside div:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+div {
+	background: slategray;
+}
+
+.header {
+	grid-area: header;
+}
+
+.aside {
+	grid-area: aside;
+}
+
+.s-head {
+	grid-area: s-head;
+}
+
+.s-aside {
+	grid-area: s-aside;
+}
+
+.ss-head-one {
+	grid-area: ss-head-one;
+}
+
+.ss-head-one {
+	grid-area: ss-head-two;
+}
+
+.ss-head-one {
+	grid-area: ss-head-three;
+}
+
+.large {
+	flex: 3;
+}
+
+.medium {
+	flex: 2;
+}
+
+.small {
+	flex: 1;
+}
